@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+
+  <Sms to="5614528021" from="2062076233">{{From}} is buzzing in.</Sms>
+   
+  <Pause length="1"></Pause>
+    <Say>One moment while I buzz you in.</Say>
+    <Pause length="1"></Pause>
+    <Play digits="9ww9"></Play>
+   <Pause length="1"></Pause>
+  <Say>Access Granted</Say>
+  
+</Response>
