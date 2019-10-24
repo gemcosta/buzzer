@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-
+  
+  # Here we are sending a text notification TO your personal phone number FROM the Twilio number. Remove if you don't need it.
   <Sms to="MYREALNUMBER" from="TWILIONUMBER">{{From}} is buzzing in.</Sms>
-   
+  
   <Pause length="1"></Pause>
+  
+  # Here we have the Twilio use a default voice to prompt the user that they're being buzzed in.
     <Say>One moment while I buzz you in.</Say>
     <Pause length="1"></Pause>
-    <Play digits="9ww9"></Play>
+  
+  # We dial 9, wait a moment, and dial 9 again. I do this because sometimes pushing 9 once is not quite enough. This ensures it works.
+   <Play digits="9ww9"></Play>
    <Pause length="1"></Pause>
+  
+  # Finally, we confirm to the user that they are allowed to enter.
   <Say>Access Granted</Say>
   
 </Response>
