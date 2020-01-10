@@ -15,5 +15,7 @@ Whether you run an Airbnb, or tend to have lots of guests, apartment owners have
 So I elected to create a "virtual blacklist" by taking advantage of Twilio's new "Functions" feature. See blacklist.cpp
 Then, I configured my number to execute the function (called "blacklist") if it receives a call. This function also executes the above TwiML code after it determines the call is not an unwanted number. Otherwise, it will reject the call.
 
+1/10/2020: It quickly became apparent that the virtual blacklist was actually not going to work because the functionality was limited to checking against an array of numbers that were already known. So I would have to wait until I already got an unwanted call, and add them to this "blacklist". But this defeats the purpose, as I want my function to ONLY accept a single number. After some time, I figured out that there is such a version of this function called a "whitelist", where the code will check that the incoming caller matches a known number instead. See whitelist.cpp for the code!
+
 ### Distribution
 Feel free to use this code yourself. Use at your own discretion.
