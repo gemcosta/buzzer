@@ -43,4 +43,4 @@ That's it!
 
 
 ### Distribution
-Feel free to use this code yourself. Use at your own discretion.
+Feel free to use this code yourself. Use at your own discretion. Consult Twilio docs for more about TwiML Bins.
