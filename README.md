@@ -28,14 +28,14 @@ You will also need a credit card to purchase a Twilio number and add a small amo
 4. Copy my code from `buzzer.bin` into your new TwiML Bin. Call it whatever you want, but be sure to edit the code with the correct phone numbers for you.
 5. If you're not worried about robocallers, all you have left to do is go to [Active Numbers](https://www.twilio.com/console/phone-numbers/incoming), click your number, and configure your "Voice & Fax" settings as follows:
 
-![twiml only settings](https://github.com/gemcosta/buzzer/blob/master/twiml_settings.png =400px)
+![twiml only settings](https://github.com/gemcosta/buzzer/blob/master/twiml_settings.png =400x200)
 
 6. If you want to prevent any unwanted callers like myself, navigate to your [Functions](https://www.twilio.com/console/functions/manage), and create a new function from scratch (do not use a template).
 7. Copy/paste the code from `whitelist.cpp`, and be sure to replace the phone number(s) in `event.whitelist` to be the only number(s) you want to allow. I personally have the callbox number and my personal number. Be sure to also replace your `twiml.redirect` with your TwiML PATH URL.
 8. Name the function "whitelist", and give it the same PATH name so it is easy to recognize.
 9. Go back to your [Active Numbers](https://www.twilio.com/console/phone-numbers/incoming), and configure your "Voice & Fax" settings as follows:
 
-![whitelist settings](https://github.com/gemcosta/buzzer/blob/master/whitelist_settings.png =400px)
+![whitelist settings](https://github.com/gemcosta/buzzer/blob/master/whitelist_settings.png =400x200)
 
 10. Test your whitelist by calling your Twilio number and see if it executes the TwiML code. If your call was rejected, double check that the number you're calling from is included in the whitelist. 
 
